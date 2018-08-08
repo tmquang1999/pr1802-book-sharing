@@ -10,7 +10,26 @@
 		<!-- Begin Menu -->
 		<ul class="navbar-nav ml-auto">
       <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Log in", '#', class: "nav-link" %></li>
+			<% if logged_in? %>
+				<li class="dropdown nav-item">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						Account <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="nav-item"><%= link_to "Profile", current_user, class: "nav-link" %></li>
+						<li class="nav-item"><%= link_to "Settings", '#', class: "nav-link" %></li>
+						<li class="divider"></li>
+						<li class="nav-item">
+							<%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %>
+						</li>
+					</ul>
+				</li>
+			<% else %>
+				<li class="nav-item"><%= link_to "Log in", login_path, class: "nav-link" %></li>
+			<% end %>
+
+
+
 			</li>
 		</ul>
 		<!-- End Menu -->
