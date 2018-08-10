@@ -1,0 +1,18 @@
+<li id="book-<%= book.id %>">
+  <%= link_to gravatar_for(book.user, size: 50), book.user %>
+  <span class="user"><%= link_to book.user.name, book.user %></span>
+  <span class="title"><%= book.name %></span>
+  <span class="pic">
+    <%= image_tag book.picture.url if book.picture? %>
+  </span>
+  <span class="content">
+    <%= book.description %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(book.created_at) %> ago.
+    <% if current_user?(book.user) %>
+      <%= link_to "delete", book, method: :delete,
+            data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

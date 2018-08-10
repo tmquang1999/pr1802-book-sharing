@@ -1,5 +1,22 @@
-<div class="mainheading center">
-  <h1 class="sitetitle">Modern Book Sharing</h1>
-  <p class="lead">The best book sharing platform for everyone</p>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="post_form">
+        <%= render 'shared/book_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Book Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="mainheading center">
+    <h1 class="sitetitle">Modern Book Sharing</h1>
+    <p class="lead">The best book sharing platform for everyone</p>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>
