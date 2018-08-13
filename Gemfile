@@ -8,6 +8,10 @@ gem 'bcrypt', '3.1.12'
 gem 'faker', '1.7.3'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'carrierwave', '1.2.2'
+gem 'mini_magick', '4.7.0'
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
 gem "font-awesome-rails"
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
@@ -17,11 +21,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'carrierwave', '1.2.2'
-gem 'mini_magick', '4.7.0'
-gem 'fog', '1.42'
-gem 'will_paginate',           '3.1.6'
-gem 'bootstrap-will_paginate', '1.0.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -38,6 +37,10 @@ group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'fog', '1.42'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
