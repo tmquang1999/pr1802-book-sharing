@@ -28,5 +28,7 @@ module SampleApp
       authentication:       'plain',
       enable_starttls_auto: true
     }
+    
+    config.i18n.default_locale = :en
   end
 end

@@ -1,0 +1,21 @@
+en:
+  books:
+    create:
+      flash_success: "Post created!"
+    destroy:
+      flash_success: "Post deleted"
+  sessions:
+    create:
+      message: "Account not activated. Check your email for the activation link."
+      flash_danger: "Invalid email/password combination"
+  users:
+    create:
+      flash_info: "Please check your email to activate your account."
+    update:
+      flash_success: "Profile updated"
+    destroy:
+      flash_success: "User deleted"
+    logged_in_user:
+      flash_danger: "Please log in."
+    find_user:
+      flash_success: "User does not exist!"

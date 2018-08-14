@@ -1,0 +1,21 @@
+vi:
+  books:
+    create:
+      flash_success: "Bài viết đã được tạo!"
+    destroy:
+      flash_success: "Bài viết đã được xoá"
+  sessions:
+    create:
+      message: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt."
+      flash_danger: "Email/mật khẩu không hợp lệ"
+  users:
+    create:
+      flash_info: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
+    update:
+      flash_success: "Hồ sơ đã được cập nhật"
+    destroy:
+      flash_success: "Người dùng đã được xoá"
+    logged_in_user:
+      flash_danger: "Vui lòng đăng nhập."
+    find_user:
+      flash_success: "Người dùng không tồn tại!"

@@ -1,0 +1,65 @@
+vi:
+  layouts:
+    header:
+      home: "Trang chủ"
+      language: "Ngôn ngữ"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+      users: "Người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      login: "Đăng nhập"
+    footer:
+      copyright: "Copyright &copy; %{year} - Team 3"
+      theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
+  sessions:
+    new:
+      title: "Đăng nhập"
+      submit: "Đăng nhập"
+      new_user: "Người dùng mới?"
+      sign_up_now: "Đăng ký ngay!"
+  shared:
+    error_messages:
+      form_contains: "Biểu mẫu chứa %{count}."
+      error: "lỗi"
+  static_pages:
+    home:
+      site_title: "Modern Book Sharing"
+      lead: "Nền tảng chia sẻ sách tốt nhất cho mọi người"
+      sign_up_now: "Đăng ký ngay!"
+  users:
+    user:
+      delete: "xóa"
+    edit:
+      title: "Chỉnh sửa người dùng"
+      save_changes: "Lưu thay đổi"
+      update_profile: "Cập nhật hồ sơ của bạn"
+      change: "Thay đổi"
+    index:
+      title: "Tất cả người dùng"
+    new:
+      title: "Đăng ký"
+      create_my_account: "Tạo tài khoản"
+  controller:
+    books:
+      create:
+        flash_success: "Bài viết đã được tạo!"
+      destroy:
+        flash_success: "Bài viết đã được xoá"
+    sessions:
+      create:
+        message: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt."
+        flash_danger: "Email/mật khẩu không hợp lệ"
+    users:
+      create:
+        flash_info: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
+      update:
+        flash_success: "Hồ sơ đã được cập nhật"
+      destroy:
+        flash_success: "Người dùng đã được xoá"
+      logged_in_user:
+        flash_danger: "Vui lòng đăng nhập."
+      find_user:
+        flash_success: "Người dùng không tồn tại!"

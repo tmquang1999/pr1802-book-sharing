@@ -15,8 +15,8 @@
   </div>
 <% else %>
   <div class="mainheading center">
-    <h1 class="sitetitle">Modern Book Sharing</h1>
-    <p class="lead">The best book sharing platform for everyone</p>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <h1 class="sitetitle"><%= t ".site_title" %></h1>
+    <p class="lead"><%= t ".lead" %></p>
+    <%= link_to t(".sign_up_now"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>

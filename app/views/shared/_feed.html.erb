@@ -1,7 +1,7 @@
 <% if @feed_items.any? %>
   <ol class="books">
     <%= render @feed_items %>
-    <%= render 'shared/comment_form'%>
+    <%= render "shared/comment_form"%>
   </ol>
   <%= will_paginate @feed_items %>
 <% end %>

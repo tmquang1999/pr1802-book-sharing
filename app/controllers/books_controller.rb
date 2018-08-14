@@ -5,17 +5,17 @@ class BooksController < ApplicationController
   def create
     @book = current_user.books.build book_params
     if @book.save
-      flash[:success] = "Post created!"
+      flash[:success] = t ".flash_success"
       redirect_to root_url
     else
       @feed_items = []
-      render 'static_pages/home'
+      render "static_pages/home"
     end
   end
 
   def destroy
     @book.destroy
-    flash[:success] = "Post deleted"
+    flash[:success] = t ".flash_success"
     redirect_to request.refferer || root_url
   end
 
