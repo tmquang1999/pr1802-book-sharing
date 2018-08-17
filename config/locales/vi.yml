@@ -6,6 +6,7 @@ vi:
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
       users: "Người dùng"
+      categories: "Danh mục"
       account: "Tài khoản"
       profile: "Hồ sơ"
       settings: "Cài đặt"
@@ -15,10 +16,33 @@ vi:
       copyright: "Copyright &copy; %{year} - Team 3"
       theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
   books:
+    book:
+      destroy_confirm: "Bạn chắc chắn chứ?"
+      posted_ago: Đã đăng %{time_ago} trước.
     edit:
       title: "Chỉnh sửa sách"
       update_book: "Cập nhật sách của bạn"
       save_changes: "Lưu thay đổi"
+  categories:
+    category:
+      show: "Chi tiết"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      destroy_confirm: "Bạn chắc chắn chứ?"
+    form:
+      name: "Tên"
+      save: "Lưu"
+    edit:
+      title: "Chỉnh sửa danh mục"
+    index:
+      title: "Tất cả danh mục"
+      new_category: "Danh mục mới"
+    new:
+      title: "Danh mục mới"
+      back: "Quay lại"
+    show:
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
   sessions:
     new:
       title: "Đăng nhập"

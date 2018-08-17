@@ -9,6 +9,13 @@ en:
       flash_success: "Post created!"
     destroy:
       flash_success: "Post deleted"
+  categories:
+    create:
+      flash_success: "Category created"
+    update:
+      flash_success: "Category updated"
+    destroy:
+      flash_success: "Category deleted"
   sessions:
     create:
       message: "Account not activated. Check your email for the activation link."
