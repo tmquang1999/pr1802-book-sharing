@@ -30,4 +30,46 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      home: "Home"
+      language: "Language"
+      english: "English"
+      vietnamese: "Vietnamese"
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+    footer:
+      copyright: "Copyright &copy; %{year} - Team 3"
+      theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
+  sessions:
+    new:
+      title: "Log in"
+      submit: "Log in"
+      new_user: "New user?"
+      sign_up_now: "Sign up now!"
+  shared:
+    error_messages:
+      form_contains: "The form contains %{count}."
+      error: "error"
+  static_pages:
+    home:
+      site_title: "Modern Book Sharing"
+      lead: "The best book sharing platform for everyone"
+      sign_up_now: "Sign up now!"
+  users:
+    user:
+      delete: "delete"
+    edit:
+      title: "Edit user"
+      save_changes: "Save changes"
+      update_profile: "Update your profile"
+      change: "Change"
+    index:
+      title: "All users"
+    new:
+      title: "Sign up"
+      create_my_account: "Create my account"

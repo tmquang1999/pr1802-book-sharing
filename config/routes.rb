@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
   get  '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get  '/login', to: 'sessions#new'
@@ -7,6 +6,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
-  resources :books,  only: [:create, :destroy]
   resources :account_activations, only: [:edit]
+  resources :books, only: [:create, :destroy]
+  scope "(:locale)", locale: /en|vi/ do
+    root 'static_pages#home'
+  end
 end
