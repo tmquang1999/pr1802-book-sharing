@@ -5,6 +5,7 @@
         <%= render 'shared/user_info' %>
       </section>
       <section class="post_form">
+        <% provide :button_text, t(".post") %>
         <%= render 'shared/book_form' %>
       </section>
     </aside>

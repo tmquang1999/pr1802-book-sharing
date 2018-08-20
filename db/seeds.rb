@@ -17,3 +17,8 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+99.times do |n|
+  name  = Faker::Name.name
+  Author.create! name: name
+end

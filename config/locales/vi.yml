@@ -14,6 +14,11 @@ vi:
     footer:
       copyright: "Copyright &copy; %{year} - Team 3"
       theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
+  books:
+    edit:
+      title: "Chỉnh sửa sách"
+      update_book: "Cập nhật sách của bạn"
+      save_changes: "Lưu thay đổi"
   sessions:
     new:
       title: "Đăng nhập"
@@ -26,6 +31,7 @@ vi:
       error: "lỗi"
   static_pages:
     home:
+      post: "Đăng"
       site_title: "Modern Book Sharing"
       lead: "Nền tảng chia sẻ sách tốt nhất cho mọi người"
       sign_up_now: "Đăng ký ngay!"

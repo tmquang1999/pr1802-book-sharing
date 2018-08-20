@@ -5,10 +5,9 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.text :description
       t.integer :share
       t.references :user, foreign_key: true
-      t.references :author, foreign_key: true
 
       t.timestamps
     end
-    add_index :books, [:user_id, :create_at]
+    add_index :books, [:user_id, :created_at]
   end
 end
