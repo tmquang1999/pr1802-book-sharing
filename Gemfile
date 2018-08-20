@@ -13,6 +13,7 @@ gem 'mini_magick', '4.7.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 gem "font-awesome-rails"
+gem 'ckeditor'
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'

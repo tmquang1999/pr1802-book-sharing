@@ -1,5 +1,10 @@
 en:
+  application:
+    logged_in_user:
+      flash_danger: "Please log in."
   books:
+    update:
+      flash_success: "Post updated!"
     create:
       flash_success: "Post created!"
     destroy:
@@ -15,7 +20,5 @@ en:
       flash_success: "Profile updated"
     destroy:
       flash_success: "User deleted"
-    logged_in_user:
-      flash_danger: "Please log in."
     find_user:
       flash_success: "User does not exist!"

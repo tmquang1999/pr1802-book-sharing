@@ -1,10 +1,10 @@
 class Book < ApplicationRecord
   belongs_to :user
-  belongs_to :author
   has_one :source, dependent: :destroy
   has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :categories, through: :book_categories
+  has_many :author, through: :book_authors
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true

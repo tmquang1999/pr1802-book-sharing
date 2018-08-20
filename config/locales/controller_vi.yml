@@ -1,5 +1,10 @@
 vi:
+  application:
+    logged_in_user:
+      flash_danger: "Vui lòng đăng nhập."
   books:
+    update:
+      flash_success: "Bài viết đã được cập nhật!"
     create:
       flash_success: "Bài viết đã được tạo!"
     destroy:
@@ -15,7 +20,5 @@ vi:
       flash_success: "Hồ sơ đã được cập nhật"
     destroy:
       flash_success: "Người dùng đã được xoá"
-    logged_in_user:
-      flash_danger: "Vui lòng đăng nhập."
     find_user:
       flash_success: "Người dùng không tồn tại!"
