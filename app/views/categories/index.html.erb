@@ -1,14 +1,18 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
 
-<%= will_paginate @users,
+<%= will_paginate @categories,
   renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
   class: "justify-content-center" %>
 
 <ul class="users">
-  <%= render @users %>
+  <%= render @categories %>
 </ul>
 
-<%= will_paginate @users,
+<%= will_paginate @categories,
   renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
   class: "justify-content-center" %>
+
+<% if current_user.admin? %>
+  <%= link_to t(".new_category"), new_category_path %>
+<% end %>

@@ -37,6 +37,7 @@ en:
       english: "English"
       vietnamese: "Vietnamese"
       users: "Users"
+      categories: "Categories"
       account: "Account"
       profile: "Profile"
       settings: "Settings"
@@ -46,10 +47,33 @@ en:
       copyright: "Copyright &copy; %{year} - Team 3"
       theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
   books:
+    book:
+      destroy_confirm: "Are you sure?"
+      posted_ago: Posted %{time_ago} ago.
     edit:
       title: "Edit book"
       update_book: "Update your book"
       save_changes: "Save changes"
+  categories:
+    category:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      destroy_confirm: "Are you sure?"
+    form:
+      name: "Name"
+      save: "Save"
+    edit:
+      title: "Edit category"
+    index:
+      title: "All categories"
+      new_category: "New category"
+    new:
+      title: "New category"
+      back: "Back"
+    show:
+      edit: "Edit"
+      back: "Back"
   sessions:
     new:
       title: "Log in"

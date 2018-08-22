@@ -6,8 +6,8 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
-99.times do |n|
-  name  = Faker::Name.name
+69.times do |n|
+  name  = Faker::Name.unique.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   User.create!(name:  name,
@@ -15,10 +15,15 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password,
                activated: true,
-               activated_at: Time.zone.now)
+               activated_at: Faker::Time.backward(14, :evening))
 end
 
-99.times do |n|
-  name  = Faker::Name.name
+70.times do |n|
+  name  = Faker::Name.unique.name
   Author.create! name: name
+end
+
+70.times do |n|
+  name  = Faker::Name.unique.name
+  Category.create! name: name
 end

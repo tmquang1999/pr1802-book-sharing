@@ -9,6 +9,13 @@ vi:
       flash_success: "Bài viết đã được tạo!"
     destroy:
       flash_success: "Bài viết đã được xoá"
+  categories:
+    create:
+      flash_success: "Danh mục đã được tạo"
+    update:
+      flash_success: "Danh mục đã được cập nhật"
+    destroy:
+      flash_success: "Danh mục đã được xóa"
   sessions:
     create:
       message: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt."
