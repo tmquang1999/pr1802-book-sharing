@@ -1,9 +1,17 @@
 class BooksController < ApplicationController
-  before_action :logged_in_user, only: %i(show create edit update destroy)
+  before_action :logged_in_user
   before_action :correct_user, only: %i(show edit update destroy)
 
+  def index
+    @books = Book.paginate page: params[:page]
+  end
+
   def show
-    @user = @book.user
+    @user = book.user
+  end
+
+  def new
+    @book = current_user.books.build
   end
 
   def create
@@ -40,7 +48,7 @@ class BooksController < ApplicationController
   attr_reader :book
 
   def book_params
-    params.require(:book).permit :name, :description, :picture
+    params.require(:book).permit :name, :description, :picture, category_ids: []
   end
 
   def correct_user

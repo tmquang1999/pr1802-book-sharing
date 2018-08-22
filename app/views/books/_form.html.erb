@@ -5,6 +5,22 @@
     <%= f.text_field :name %>
     <%= f.label :description %>
     <%= f.cktext_area :description, rows: 10 %>
+    <%= f.label :categories %>
+    <ul class="book_form">
+      <%= collection_check_boxes(:book, :category_ids, Category.all, :id, :name) do |category| %>
+        <li>
+          <%= category.label("data-value": category.value) { category.check_box + category.text }%>
+        </li>
+      <% end %>
+    </ul>
+    <%= f.label :authors %>
+    <ul class="book_form">
+      <%= collection_check_boxes(:book, :author_ids, Author.all, :id, :name) do |author| %>
+        <li>
+          <%= author.label("data-value": author.value) { author.check_box + author.text }%>
+        </li>
+      <% end %>
+    </ul>
   </div>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
   <span class="picture">

@@ -1,0 +1,14 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<%= will_paginate @books,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
+  class: "justify-content-center" %>
+
+<ul class="users">
+  <%= render @books %>
+</ul>
+
+<%= will_paginate @books,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
+  class: "justify-content-center" %>

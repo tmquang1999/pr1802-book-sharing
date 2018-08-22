@@ -10,11 +10,13 @@
   </aside>
     <div class="col-md-8">
     <% if @user.books.any? %>
-      <h3>Posts (<%= @user.books.count %>)</h3>
+      <h3><%= t ".books" %> (<%= @user.books.count %>)</h3>
       <ol class="books">
         <%= render @books %>
       </ol>
-      <%= will_paginate @books %>
+      <%= will_paginate @books,
+        renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
+        class: "justify-content-center" %>
     <% end %>
   </div>
 </div>

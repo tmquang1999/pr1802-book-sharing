@@ -5,6 +5,7 @@ class Book < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :book_categories
   has_many :categories, through: :book_categories
+  has_many :book_authors
   has_many :author, through: :book_authors
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
