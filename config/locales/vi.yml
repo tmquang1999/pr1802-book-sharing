@@ -6,6 +6,9 @@ vi:
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
       users: "Người dùng"
+      books: "Sách"
+      all_books: "Tất cả sách"
+      upload_book: "Tải sách mới lên"
       categories: "Danh mục"
       account: "Tài khoản"
       profile: "Hồ sơ"
@@ -23,6 +26,10 @@ vi:
       title: "Chỉnh sửa sách"
       update_book: "Cập nhật sách của bạn"
       save_changes: "Lưu thay đổi"
+    index:
+      title: "Tất cả sách"
+    new:
+      publish: "Xuất bản"
   categories:
     category:
       show: "Chi tiết"
@@ -55,6 +62,7 @@ vi:
       error: "lỗi"
   static_pages:
     home:
+      book_feed: "Bảng tin sách"
       post: "Đăng"
       site_title: "Modern Book Sharing"
       lead: "Nền tảng chia sẻ sách tốt nhất cho mọi người"
@@ -72,24 +80,5 @@ vi:
     new:
       title: "Đăng ký"
       create_my_account: "Tạo tài khoản"
-  controller:
-    books:
-      create:
-        flash_success: "Bài viết đã được tạo!"
-      destroy:
-        flash_success: "Bài viết đã được xoá"
-    sessions:
-      create:
-        message: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt."
-        flash_danger: "Email/mật khẩu không hợp lệ"
-    users:
-      create:
-        flash_info: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
-      update:
-        flash_success: "Hồ sơ đã được cập nhật"
-      destroy:
-        flash_success: "Người dùng đã được xoá"
-      logged_in_user:
-        flash_danger: "Vui lòng đăng nhập."
-      find_user:
-        flash_success: "Người dùng không tồn tại!"
+    show:
+      books: "Sách"

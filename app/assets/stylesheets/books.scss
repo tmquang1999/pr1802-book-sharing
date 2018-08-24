@@ -44,3 +44,14 @@ span.picture {
     border: 0;
   }
 }
+
+.book_form{
+  input{
+    width: auto;
+  }
+  list-style: none;
+  overflow-y: auto;
+  li {
+    display: inline-block;
+  }
+}

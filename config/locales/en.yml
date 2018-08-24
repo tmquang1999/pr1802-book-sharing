@@ -37,6 +37,9 @@ en:
       english: "English"
       vietnamese: "Vietnamese"
       users: "Users"
+      books: "Books"
+      all_books: "All books"
+      upload_book: "Upload a new book"
       categories: "Categories"
       account: "Account"
       profile: "Profile"
@@ -54,6 +57,10 @@ en:
       title: "Edit book"
       update_book: "Update your book"
       save_changes: "Save changes"
+    index:
+      title: "All books"
+    new:
+      publish: "Publish"
   categories:
     category:
       show: "Show"
@@ -86,7 +93,7 @@ en:
       error: "error"
   static_pages:
     home:
-      post: "Post"
+      book_feed: "Book Feed"
       site_title: "Modern Book Sharing"
       lead: "The best book sharing platform for everyone"
       sign_up_now: "Sign up now!"
@@ -103,3 +110,5 @@ en:
     new:
       title: "Sign up"
       create_my_account: "Create my account"
+    show:
+      books: "Books"
