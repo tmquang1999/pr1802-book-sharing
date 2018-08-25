@@ -1,13 +1,9 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
 
-<%= will_paginate @books,
-  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
-  class: "justify-content-center" %>
-
-<ul class="users">
+<div class="card-columns listfeaturedtag">
   <%= render @books %>
-</ul>
+</div>
 
 <%= will_paginate @books,
   renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,

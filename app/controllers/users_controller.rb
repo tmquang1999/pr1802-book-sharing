@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @books = @user.books.paginate page: params[:page]
+    @books = user.books.paginate page: params[:page]
   end
 
   def new
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
   def find_user
     @user = User.find_by id: params[:id]
     return if user
-    flash[:success] = t ".flash_success"
+    flash[:info] = t ".flash_info"
     redirect_to root_path
   end
 end

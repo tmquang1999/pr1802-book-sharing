@@ -3,6 +3,8 @@ en:
     logged_in_user:
       flash_danger: "Please log in."
   books:
+    show:
+      flash_info: "Book does not exist!"
     update:
       flash_success: "Post updated!"
     create:
@@ -16,6 +18,8 @@ en:
       flash_success: "Category updated"
     destroy:
       flash_success: "Category deleted"
+    find_category:
+      flash_info: "Category does not exist!"
   sessions:
     create:
       message: "Account not activated. Check your email for the activation link."
@@ -28,4 +32,4 @@ en:
     destroy:
       flash_success: "User deleted"
     find_user:
-      flash_success: "User does not exist!"
+      flash_info: "User does not exist!"

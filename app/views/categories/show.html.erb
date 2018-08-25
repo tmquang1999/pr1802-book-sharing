@@ -1,9 +1,9 @@
 <% provide :title, @category.name %>
 
 <p>
-  <strong><%= t ".name" %></strong>
-  <%= @category.name %>
+  <strong><%= t ".name" %></strong><%= @category.name %>
+  <% if current_user.admin? %>
+    <%= link_to t(".edit"), edit_category_path(@category) %> |
+    <%= link_to t(".destroy"), @category, method: :delete, data: { confirm: t(".destroy_confirm") } %>
+  <% end %>
 </p>
-
-<%= link_to t(".edit"), edit_category_path(@category) %> |
-<%= link_to t(".back"), categories_path %>

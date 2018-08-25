@@ -1,22 +1,44 @@
 <% provide :title, @user.name %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-    <div class="col-md-8">
-    <% if @user.books.any? %>
-      <h3><%= t ".books" %> (<%= @user.books.count %>)</h3>
-      <ol class="books">
-        <%= render @books %>
-      </ol>
-      <%= will_paginate @books,
-        renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
-        class: "justify-content-center" %>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="mainheading">
+        <div class="row post-top-meta authorpage">
+          <div class="col-md-10 col-xs-12">
+            <h1><%= @user.name %></h1>
+            <span class="author-description">
+              <%= t ".dummy_description" %>
+            </span>
+            <%= link_to("#", target: "_blank", class: "btn follow") do %>
+              <i class="fa fa-facebook"></i>
+            <% end %>
+            <span class="dot"></span>
+            <%= link_to("#", target: "_blank", class: "btn follow") do %>
+              <i class="fa fa-google-plus"></i>
+            <% end %>
+            <span class="dot"></span>
+            <%= link_to "Follow", "#", target: "_blank", class: "btn follow" %>
+          </div>
+          <div class="col-md-2 col-xs-12">
+            <%= link_to gravatar_for(@user, size: 50, alt: @user.name), @user %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<section class="featured-posts">
+<div class="section-title">
+  <h2><span><%= t ".books" %> (<%= @user.books.count %>)</span></h2>
+</div>
+<% if @user.books.any? %>
+  <div class="card-columns listfeaturedtag">
+    <%= render @books %>
+  </div>
+  <%= will_paginate @books,
+    renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
+    class: "justify-content-center" %>
+<% end %>
+</section>

@@ -1,13 +1,19 @@
 class BooksController < ApplicationController
   before_action :logged_in_user
-  before_action :correct_user, only: %i(show edit update destroy)
+  before_action :correct_user, only: %i(edit update destroy)
 
   def index
     @books = Book.paginate page: params[:page]
   end
 
   def show
-    @user = book.user
+    @book = Book.find_by id: params[:id]
+    if @book.nil?
+      flash[:info] = t ".flash_info"
+      redirect_to root_url
+    else
+      @user = @book.user
+    end
   end
 
   def new
@@ -20,7 +26,6 @@ class BooksController < ApplicationController
       flash[:success] = t ".flash_success"
       redirect_to root_url
     else
-      @feed_items = []
       render "static_pages/home"
     end
   end
