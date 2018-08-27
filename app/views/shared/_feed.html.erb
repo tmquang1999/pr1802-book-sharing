@@ -1,8 +1,0 @@
-<% if @feed_items.any? %>
-  <ol class="books">
-    <%= render @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items,
-  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer,
-  class: "justify-content-center" %>
-<% end %>

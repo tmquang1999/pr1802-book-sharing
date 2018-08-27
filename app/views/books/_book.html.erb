@@ -1,19 +1,44 @@
-<li id="book-<%= book.id %>">
-  <%= link_to gravatar_for(book.user, size: 50), book.user %>
-  <span class="user"><%= link_to book.user.name, book.user %></span>
-  <span class="title"><%= link_to book.name, book_path(book)%></span>
-  <span class="pic">
-    <%= image_tag book.picture.url if book.picture? %>
-  </span>
-  <span class="content">
-    <%= sanitize book.description %>
-  </span>
-  <span class="timestamp">
-    <%= t ".posted_ago", time_ago: time_ago_in_words(book.created_at) %>
-    <% if current_user?(book.user) %>
-      <%= link_to "edit", edit_book_path(book) %> |
-      <%= link_to "delete", book, method: :delete,
-        data: { confirm: t(".destroy_confirm") } %>
-    <% end %>
-  </span>
-</li>
+<div class="card">
+  <div class="row">
+    <div class="col-md-5 wrapthumbnail">
+      <a href="#">
+        <% if book.picture? %>
+          <div class="thumbnail" style="background-image:url(<%= book.picture.url %>);">
+          </div>
+        <% end %>
+      </a>
+    </div>
+    <div class="col-md-7">
+      <div class="card-block">
+        <h2 class="card-title"><%= link_to book.name, book_path(book)%></h2>
+        <h4 class="card-text">
+          <%= sanitize book.description %>
+        </h4>
+        <div class="metafooter">
+          <div class="wrapfooter">
+            <span class="meta-footer-thumb">
+              <%= link_to gravatar_for(book.user, size: 50,
+                alt: book.user.name), book.user %>
+            </span>
+            <span class="author-meta">
+              <span class="post-name">
+                <%= link_to book.user.name, book.user %>
+              </span>
+              <br/>
+              <span class="post-date">
+                <%= book.created_at.strftime("%d %b %Y") %>
+                <% if current_user?(book.user) %>
+                  <span class="dot"></span>
+                  <%= link_to t(".edit"), edit_book_path(book) %>
+                  <span class="dot"></span>
+                  <%= link_to t(".delete"), book, method: :delete,
+                    data: { confirm: t(".destroy_confirm") } %>
+                <% end %>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

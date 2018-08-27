@@ -20,8 +20,9 @@ vi:
       theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
   books:
     book:
+      edit: "Sửa"
+      delete: "Xóa"
       destroy_confirm: "Bạn chắc chắn chứ?"
-      posted_ago: Đã đăng %{time_ago} trước.
     edit:
       title: "Chỉnh sửa sách"
       update_book: "Cập nhật sách của bạn"
@@ -30,12 +31,20 @@ vi:
       title: "Tất cả sách"
     new:
       publish: "Xuất bản"
-  categories:
-    category:
-      show: "Chi tiết"
+    show:
+      share: "Chia sẻ"
+      comment: "Bình luận"
+      dummy_description: |
+        "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
+        theme that you're currently previewing. Developing semi-professional
+        projects since 2012."
+      publised_at: "Xuất bản"
+      updated_at: "Cập nhật"
       edit: "Chỉnh sửa"
-      destroy: "Xóa"
-      destroy_confirm: "Bạn chắc chắn chứ?"
+      delete: "Xoá"
+      delete_confirm: "Bạn chắc chắn chứ?"
+      dummy_related_title: "How travelling can change your life"
+  categories:
     form:
       name: "Tên"
       save: "Lưu"
@@ -48,8 +57,10 @@ vi:
       title: "Danh mục mới"
       back: "Quay lại"
     show:
+      name: "Tên: "
       edit: "Chỉnh sửa"
-      back: "Quay lại"
+      destroy: "Xóa"
+      destroy_confirm: "Bạn chắc chắn chứ?"
   sessions:
     new:
       title: "Đăng nhập"
@@ -62,14 +73,21 @@ vi:
       error: "lỗi"
   static_pages:
     home:
-      book_feed: "Bảng tin sách"
-      post: "Đăng"
+      featured: "Đặc sắc"
+      dummy_title: "We're living some strange times"
+      dummy_content: |
+        "This is a longer card with supporting text below as a natural lead-in
+        to additional content. This content is a little bit longer."
+      dummy_user: "Steve"
+      dummy_created_at: "22 July 2017"
+      dummy_reading_time: "6 min read"
       site_title: "Modern Book Sharing"
       lead: "Nền tảng chia sẻ sách tốt nhất cho mọi người"
       sign_up_now: "Đăng ký ngay!"
   users:
     user:
-      delete: "xóa"
+      delete: "Xóa"
+      delete_confirm: "Bạn chắc chắn chứ?"
     edit:
       title: "Chỉnh sửa người dùng"
       save_changes: "Lưu thay đổi"
@@ -81,4 +99,8 @@ vi:
       title: "Đăng ký"
       create_my_account: "Tạo tài khoản"
     show:
+      dummy_description: |
+        "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
+        theme that you're currently previewing. Developing semi-professional
+        projects since 2012."
       books: "Sách"

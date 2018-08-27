@@ -51,8 +51,9 @@ en:
       theme_by: Modern Book Sharing Theme by <a target="_blank" href="%{link}">%{author}</a>
   books:
     book:
+      edit: "Edit"
+      delete: "Delete"
       destroy_confirm: "Are you sure?"
-      posted_ago: Posted %{time_ago} ago.
     edit:
       title: "Edit book"
       update_book: "Update your book"
@@ -61,12 +62,20 @@ en:
       title: "All books"
     new:
       publish: "Publish"
-  categories:
-    category:
-      show: "Show"
+    show:
+      share: "Share"
+      comment: "Comment"
+      dummy_description: |
+        "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
+        theme that you're currently previewing. Developing semi-professional
+        projects since 2012."
+      publised_at: "Published at"
+      updated_at: "Updated at"
       edit: "Edit"
-      destroy: "Destroy"
-      destroy_confirm: "Are you sure?"
+      delete: "Delete"
+      delete_confirm: "Are you sure?"
+      dummy_related_title: "How travelling can change your life"
+  categories:
     form:
       name: "Name"
       save: "Save"
@@ -79,8 +88,10 @@ en:
       title: "New category"
       back: "Back"
     show:
+      name: "Name: "
       edit: "Edit"
-      back: "Back"
+      destroy: "Destroy"
+      destroy_confirm: "Are you sure?"
   sessions:
     new:
       title: "Log in"
@@ -93,13 +104,21 @@ en:
       error: "error"
   static_pages:
     home:
-      book_feed: "Book Feed"
+      featured: "Featured"
+      dummy_title: "We're living some strange times"
+      dummy_content: |
+        "This is a longer card with supporting text below as a natural lead-in
+        to additional content. This content is a little bit longer."
+      dummy_user: "Steve"
+      dummy_created_at: "22 July 2017"
+      dummy_reading_time: "6 min read"
       site_title: "Modern Book Sharing"
       lead: "The best book sharing platform for everyone"
       sign_up_now: "Sign up now!"
   users:
     user:
-      delete: "delete"
+      delete: "Delete"
+      delete_confirm: "Are you sure?"
     edit:
       title: "Edit user"
       save_changes: "Save changes"
@@ -111,4 +130,8 @@ en:
       title: "Sign up"
       create_my_account: "Create my account"
     show:
+      dummy_description: |
+        "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
+        theme that you're currently previewing. Developing semi-professional
+        projects since 2012."
       books: "Books"

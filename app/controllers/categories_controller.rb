@@ -52,5 +52,8 @@ class CategoriesController < ApplicationController
 
   def find_category
     @category = Category.find_by id: params[:id]
+    return if category
+    flash[:info] = t ".flash_info"
+    redirect_to root_path
   end
 end
