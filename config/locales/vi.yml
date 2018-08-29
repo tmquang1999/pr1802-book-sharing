@@ -43,6 +43,8 @@ vi:
       edit: "Chỉnh sửa"
       delete: "Xoá"
       delete_confirm: "Bạn chắc chắn chứ?"
+      average_rating: "Xếp hạng trung bình:"
+      your_rating: "Xếp hạng của bạn:"
       dummy_related_title: "How travelling can change your life"
   categories:
     form:
@@ -73,7 +75,7 @@ vi:
       error: "lỗi"
   static_pages:
     home:
-      featured: "Đặc sắc"
+      recently_published: "Xuất Bản Gần Đây"
       dummy_title: "We're living some strange times"
       dummy_content: |
         "This is a longer card with supporting text below as a natural lead-in
@@ -103,4 +105,5 @@ vi:
         "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
         theme that you're currently previewing. Developing semi-professional
         projects since 2012."
+      book: "Sách"
       books: "Sách"

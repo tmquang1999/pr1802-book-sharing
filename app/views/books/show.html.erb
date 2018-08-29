@@ -76,6 +76,16 @@
                   data: { confirm: t(".delete_confirm") } %>
               </span>
             <% end %>
+            <br>
+            <span class="post-date">
+               <strong><%= t ".average_rating" %></strong>
+               <span id="star" data=<%= @book.average_rating %>></span>
+            </span>
+            <br>
+            <span class="post-date">
+               <strong><%= t ".your_rating" %></strong>
+               <span id="user_star" data-id=<%= @rating.id %> data-score=<%= @rating.score %>></span>
+            </span>
           </div>
         </div>
         <!-- End Top Menta -->

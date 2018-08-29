@@ -14,6 +14,7 @@ class BooksController < ApplicationController
     else
       @user = @book.user
     end
+    @rating = current_user.ratings.find_or_initialize_by book_id: @book.id
   end
 
   def new

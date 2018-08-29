@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_133141) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "rating"
+    t.integer "score", default: 0
     t.integer "user_id"
     t.integer "book_id"
     t.datetime "created_at", null: false

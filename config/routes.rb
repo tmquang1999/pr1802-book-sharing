@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'ratings/update'
   mount Ckeditor::Engine => "/ckeditor"
   get  "/signup", to: "users#new"
   post "/signup", to: "users#create"
@@ -10,7 +11,8 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :books
   resources :categories
-  
+  resources :ratings, only: :update
+
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
   end

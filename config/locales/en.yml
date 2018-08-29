@@ -74,6 +74,8 @@ en:
       edit: "Edit"
       delete: "Delete"
       delete_confirm: "Are you sure?"
+      average_rating: "Averate rating:"
+      your_rating: "Your rating:"
       dummy_related_title: "How travelling can change your life"
   categories:
     form:
@@ -104,7 +106,7 @@ en:
       error: "error"
   static_pages:
     home:
-      featured: "Featured"
+      recently_published: "Recently Published"
       dummy_title: "We're living some strange times"
       dummy_content: |
         "This is a longer card with supporting text below as a natural lead-in
@@ -134,4 +136,5 @@ en:
         "Core member of Team 3 and creater of <b>"Modern Book Sharing"</b>
         theme that you're currently previewing. Developing semi-professional
         projects since 2012."
+      book: "Book"
       books: "Books"
