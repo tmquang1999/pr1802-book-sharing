@@ -13,6 +13,12 @@ class Book < ApplicationRecord
   validates :description, presence: true, length: {maximum: 800}
   validate :picture_size
 
+  scope :recently_published, -> { order(created_at: :desc).limit 6 }
+
+  def average_rating
+    ratings.sum(:score) / ratings.size
+  end
+
   private
 
   # Validates the size of an uploaded picture.

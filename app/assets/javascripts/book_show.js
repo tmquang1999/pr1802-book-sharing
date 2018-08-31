@@ -9,5 +9,29 @@ $(document).on('turbolinks:load', function() {
           $(".share").show();
         }
     });
+
+    $('#star').raty({
+      readOnly: true,
+      score: $('#star').attr('data'),
+      path: '/assets/'
+    });
+
+    $('#user_star').raty({
+      score: $(this).attr('data-score'),
+      path: '/assets/',
+      click: function(score) {
+        $.ajax({
+          url: '/ratings/' + $(this).attr('data-id'),
+          type: 'PATCH',
+          data: { score: score }
+        }).done(function (data){
+          $('#star').raty({
+            readOnly: true,
+            score: data,
+            path: '/assets/'
+          });
+        });
+      }
+    });
   });
 })
